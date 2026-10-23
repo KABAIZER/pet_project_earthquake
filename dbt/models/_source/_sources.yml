@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: usgs
+    database: dwh
+    schema: public
+    tables:
+      - name: earthquakes
+        description: '{{ doc("usgs__earthquakes") }}'

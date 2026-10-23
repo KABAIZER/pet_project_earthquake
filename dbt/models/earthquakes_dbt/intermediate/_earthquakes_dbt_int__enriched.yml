@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: earthquakes_dbt_int__enriched
+    description: '{{ doc("earthquakes_dbt_int__enriched") }}'
+    columns:
+      - name: event_id
+        description: '{{ doc("col__event_id") }}'
+      - name: region
+        description: '{{ doc("col__region") }}'
+      - name: magnitude_class
+        description: '{{ doc("col__magnitude_class") }}'
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [micro, minor, light, moderate, strong, major]
+      - name: depth_class
+        description: '{{ doc("col__depth_class") }}'

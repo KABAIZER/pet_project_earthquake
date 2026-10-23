@@ -1,0 +1,17 @@
+name: test_dbt
+version: "1.0.0"
+config-version: 2
+profile: test_dbt
+
+macro-paths: ["_macros"]
+
+models:
+  test_dbt:
+    _staging:
+      +materialized: ephemeral
+    earthquakes_dbt:
+      intermediate:
+        +materialized: ephemeral
+      marts:
+        +materialized: external
+        +format: parquet
