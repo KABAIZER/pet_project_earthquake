@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: earthquakes_dbt_mart__daily
+    description: '{{ doc("earthquakes_dbt_mart__daily") }}'
+    columns:
+      - name: day
+        description: '{{ doc("col__day") }}'
+        data_tests: [unique, not_null]
+      - name: events
+        description: '{{ doc("col__events") }}'
+      - name: avg_magnitude
+        description: '{{ doc("col__avg_magnitude") }}'
+      - name: max_magnitude
+        description: '{{ doc("col__max_magnitude") }}'
+      - name: moderate_plus_events
+        description: '{{ doc("col__moderate_plus_events") }}'
+      - name: tsunami_flagged_events
+        description: '{{ doc("col__tsunami_flagged_events") }}'

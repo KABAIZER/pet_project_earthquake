@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: earthquakes_stg__earthquakes
+    description: '{{ doc("earthquakes_stg__earthquakes") }}'
+    columns:
+      - name: event_id
+        description: '{{ doc("col__event_id") }}'
+        data_tests: [unique, not_null]
+      - name: event_at
+        description: '{{ doc("col__event_at") }}'
+      - name: event_date
+        description: '{{ doc("col__event_date") }}'
+      - name: magnitude
+        description: '{{ doc("col__magnitude") }}'
+        data_tests: [not_null]
+      - name: mag_type
+        description: '{{ doc("col__mag_type") }}'
+      - name: place
+        description: '{{ doc("col__place") }}'
+      - name: longitude
+        description: '{{ doc("col__longitude") }}'
+      - name: latitude
+        description: '{{ doc("col__latitude") }}'
+      - name: depth_km
+        description: '{{ doc("col__depth_km") }}'
+      - name: is_tsunami_flagged
+        description: '{{ doc("col__is_tsunami_flagged") }}'
+      - name: url
+        description: '{{ doc("col__url") }}'
+      - name: updated_at
+        description: '{{ doc("col__updated_at") }}'
